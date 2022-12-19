@@ -22,3 +22,4 @@ Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
 Route::get('/posts', [PostsController::class, 'index'])->name('posts');
+Route::post('/posts', [PostsController::class, 'store']);
