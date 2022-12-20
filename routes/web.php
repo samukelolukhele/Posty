@@ -27,6 +27,8 @@ Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
 Route::get('/posts', [PostsController::class, 'index'])->name('posts');
 Route::post('/posts', [PostsController::class, 'store']);
+Route::get('/posts/{post}', [PostsController::class, 'show'])->name('posts.show');
+
 Route::delete('/posts/{post}', [PostsController::class, 'destroy'])->name('posts.destroy');
 
 

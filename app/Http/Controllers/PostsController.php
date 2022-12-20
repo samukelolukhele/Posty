@@ -18,6 +18,12 @@ class PostsController extends Controller
         ]);
     }
 
+    public function show(Post $post){
+        return view('posts.show', [
+            'post'=> $post
+        ]);
+    }
+
     public function store(Request $req)
     {
         $this->validate($req, [
