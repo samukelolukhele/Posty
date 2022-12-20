@@ -40,7 +40,7 @@
             </div>
         </div>
         <div>
-            <button type="submit" class="bg-blue-500 text-white px-4 py-3 rounded font-medium w-full">Register</button>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-3 rounded font-medium w-full">Login</button>
         </div>
     </form>
    </div>

@@ -24,7 +24,7 @@ class LoginController extends Controller
         ]);
 
         if(!auth()->attempt($req ->only('email', 'password'), $req->remember)){
-            return back()->with('status', 'invalid login credentials');
+            return back()->with('status', 'Invalid login credentials');
         };
 
         return redirect()->route('dashboard');

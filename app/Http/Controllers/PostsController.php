@@ -9,7 +9,7 @@ class PostsController extends Controller
 {
     public function index()
     {
-        $posts = Post::paginate(20);
+        $posts = Post::latest()->with(['user', 'likes'])->paginate(20);
 
         
 
@@ -25,6 +25,13 @@ class PostsController extends Controller
         ]);
 
         $req->user()->posts()->create($req->only('body'));
+
+        return back();
+    }
+
+    public function destroy(Post $post)
+    {
+        $post->delete();
 
         return back();
     }
